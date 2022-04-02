@@ -11,12 +11,11 @@ export default function Tracks () {
   const handleTrackSearch = (event) => {
     setSearch(event.target.value)
   }
-  const { data1 } = useQuery(['track', search], () => {
+  const { data } = useQuery(['track', search], () => {
     var url = new URL('http://localhost:3000/tracks')
     url.search = new URLSearchParams({name: search}).toString()
     return fetch(url)
   })
-  const data = []
 
   const columns = [
     { field: 'id', hide: true},
