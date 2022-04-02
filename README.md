@@ -37,3 +37,8 @@ npm start
 ```shell
 yarn start
 ```
+
+## Missing Features
+
+1. Add debounce to prevent unnecessary api calls while typing on the search bar
+2. Display loading status
